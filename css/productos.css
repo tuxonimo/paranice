@@ -1,0 +1,898 @@
+
+/* ==========================================
+   PARANICE - PRODUCTOS
+   Bootstrap 5.0.2
+   CSS INDEPENDIENTE
+========================================== */
+
+
+/* ==========================================
+   1. VARIABLES Y TIPOGRAFIAS
+========================================== */
+
+:root {
+    --purple: #4b1d82;
+    --purple-dark: #2d154f;
+    --lavender: #a69ccc;
+    --lavender-light: #e8e3f5;
+    --pink: #bd5998;
+    --cream: #fdf7f0;
+    --white: #ffffff;
+
+    --font-display: 'Lilita One', cursive;
+    --font-body: 'DM Sans', sans-serif;
+
+    --header-height: 100px;
+}
+
+
+/* ==========================================
+   2. ESTILOS GENERALES
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    margin: 0;
+    padding: var(--header-height) 0 0;
+
+    background-image: url("../img/fondo-productos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--purple-dark);
+
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.page-container {
+    max-width: 1440px;
+}
+
+
+/* ==========================================
+   3. HEADER GLASSMORPHISM
+========================================== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: var(--header-height);
+
+    z-index: 1050;
+
+    background: rgba(166, 156, 204, 0.42);
+
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.35);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(166, 156, 204, 0.55);
+
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    backdrop-filter: blur(24px) saturate(160%);
+
+    box-shadow:
+        0 8px 30px rgba(45, 21, 79, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.site-header .navbar {
+    min-height: var(--header-height);
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* ==========================================
+   4. LOGO SVG
+========================================== */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+.brand-image {
+    display: block;
+
+    height: 48px;
+    width: auto;
+    max-width: 190px;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   5. CAPSULA DE NAVEGACION
+========================================== */
+
+.nav-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 9px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 60px;
+
+    box-shadow:
+        0 4px 20px rgba(45, 21, 79, 0.05);
+}
+
+.nav-pill .nav-item {
+    list-style: none;
+}
+
+.nav-pill .nav-link {
+    display: block;
+
+    padding: 13px 20px !important;
+
+    color: var(--purple-dark) !important;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.nav-pill .nav-link:hover {
+    background: rgba(255, 255, 255, 0.60);
+    color: var(--purple) !important;
+}
+
+.nav-pill .nav-link.active {
+    background: rgba(255, 255, 255, 0.90);
+    color: var(--purple) !important;
+}
+
+
+/* ==========================================
+   6. NAVEGACION DESKTOP
+========================================== */
+
+@media (min-width: 992px) {
+
+    .nav-container {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+
+        gap: 28px;
+    }
+
+    .nav-container .navbar-brand {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .nav-container .navbar-collapse {
+        position: static !important;
+
+        display: flex !important;
+
+        flex-grow: 0;
+        flex-basis: auto;
+
+        width: auto;
+
+        transform: none !important;
+        margin: 0;
+    }
+
+    .nav-pill {
+        width: max-content;
+    }
+}
+
+
+/* ==========================================
+   7. SECCION DE PRODUCTOS
+========================================== */
+
+.products-section {
+    min-height: 70vh;
+
+    padding: 90px 0 125px;
+
+    background: transparent;
+}
+
+.products-section-heading {
+    margin-bottom: 42px;
+}
+
+.products-section-title {
+    margin: 0;
+
+    font-size: clamp(48px, 5vw, 76px);
+    line-height: 1;
+    letter-spacing: -1px;
+
+    color: var(--purple-dark);
+}
+
+.products-section-title span {
+    color: #7b76c0;
+}
+
+
+/* ==========================================
+   8. GRID DE PRODUCTOS
+========================================== */
+
+.products-grid > div {
+    display: flex;
+
+    scroll-margin-top: 120px;
+}
+
+
+/* ==========================================
+   9. TARJETAS
+========================================== */
+
+.product-panel {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    min-width: 0;
+    height: 560px;
+
+    padding: 26px;
+
+    overflow: hidden;
+    border-radius: 24px;
+
+    color: var(--purple-dark);
+
+    transition:
+        box-shadow 0.35s ease;
+}
+
+.product-panel:hover {
+    box-shadow:
+        0 18px 40px rgba(45, 21, 79, 0.12);
+}
+
+
+/* ==========================================
+   10. COLORES DE LAS TARJETAS
+========================================== */
+
+/* PRODUCTO 1 - PISTACHO */
+
+.product-one {
+    background: rgba(185, 197, 151, 0.90);
+    backdrop-filter: blur(6px);
+}
+
+/* PRODUCTO 2 - BROWNIE */
+
+.product-two {
+    background: rgba(219, 177, 164, 0.88);
+    backdrop-filter: blur(6px);
+}
+
+/* PRODUCTO 3 - CRUNCHY */
+
+.product-three {
+    background: rgba(123, 118, 192, 0.88);
+    backdrop-filter: blur(6px);
+}
+
+
+/* ==========================================
+   11. COLORES DE LOS PLACEHOLDERS
+========================================== */
+
+/*
+   Estas tres tarjetas son espacios
+   reservados para futuros productos.
+
+   Puedes cambiar sus colores aqui.
+*/
+
+.product-four {
+    background: rgba(232, 224, 242, 0.95);
+}
+
+.product-five {
+    background: rgba(244, 219, 202, 0.95);
+}
+
+.product-six {
+    background: rgba(207, 219, 205, 0.95);
+}
+
+
+/* ==========================================
+   12. PARTE SUPERIOR
+========================================== */
+
+.panel-top {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.panel-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+
+    font-size: 21px;
+}
+
+
+/* ==========================================
+   13. ZONA VISUAL
+========================================== */
+
+.panel-visual {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    min-height: 0;
+}
+
+.product-glow {
+    position: absolute;
+
+    width: 255px;
+    height: 255px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease;
+}
+
+.product-panel:hover .product-glow {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+
+/* ==========================================
+   14. IMAGEN REAL DEL PRODUCTO
+========================================== */
+
+.product-image {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    max-height: 300px;
+    max-width: 85%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    transform: translateY(0) scale(1);
+
+    filter: drop-shadow(
+        14px 20px 14px rgba(45, 21, 79, 0.14)
+    );
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
+}
+
+.product-panel:hover .product-image {
+    transform: translateY(-12px) scale(1.06);
+
+    filter: drop-shadow(
+        14px 28px 18px rgba(45, 21, 79, 0.20)
+    );
+}
+
+
+/* ==========================================
+   15. TARJETAS VACIAS
+========================================== */
+
+.empty-product-visual {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 175px;
+    height: 220px;
+
+    border: 2px dashed rgba(45, 21, 79, 0.20);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    transform: translateY(0) scale(1);
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.empty-product-visual span {
+    font-family: var(--font-display);
+    font-size: 72px;
+
+    color: rgba(45, 21, 79, 0.25);
+}
+
+.product-empty:hover .empty-product-visual {
+    transform: translateY(-12px) scale(1.06);
+}
+
+
+/* ==========================================
+   16. PARTE INFERIOR
+========================================== */
+
+.panel-bottom {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+}
+
+.product-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.product-name {
+    margin: 0 0 23px;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(27px, 3vw, 43px);
+    line-height: 1;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   17. BOTON COMPRAR AHORA
+========================================== */
+
+.product-buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    min-height: 46px;
+    padding: 12px 20px;
+
+    border: 1px solid var(--purple-dark);
+    border-radius: 50px;
+
+    background: var(--purple-dark);
+    color: var(--white);
+
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-buy:hover:not(:disabled) {
+    background: var(--white);
+    color: var(--purple-dark);
+
+    transform: translateY(-3px);
+}
+
+.product-buy:focus-visible {
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+}
+
+.product-buy:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   18. AVISO DE COMPRA DEMOSTRATIVA
+========================================== */
+
+.purchase-notice {
+    margin-top: 30px;
+    padding: 20px 24px;
+
+    border: 1px solid rgba(75, 29, 130, 0.16);
+    border-radius: 16px;
+
+    background: var(--lavender-light);
+    color: var(--purple-dark);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.purchase-notice[hidden] {
+    display: none;
+}
+
+
+/* ==========================================
+   19. FOOTER
+========================================== */
+
+.site-footer {
+    padding: 65px 0 25px;
+
+    background: #eae4f2;
+}
+
+.footer-brand {
+    display: inline-block;
+}
+
+.footer-logo {
+    display: block;
+
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.footer-description {
+    margin-top: 12px;
+
+    color: #776b85;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--purple-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 55px;
+    padding-top: 22px;
+
+    border-top: 1px solid #d1c7dd;
+
+    color: #776b85;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   20. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+    :root {
+        --header-height: 82px;
+    }
+
+    .site-header .navbar {
+        min-height: 82px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .brand-image {
+        height: 42px;
+    }
+
+    .navbar-toggler {
+        border: 0;
+        box-shadow: none !important;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+
+        margin-top: 18px;
+    }
+
+    .nav-pill {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+        padding: 12px;
+
+        border-radius: 24px;
+    }
+
+    .nav-pill .nav-link {
+        padding: 13px 18px !important;
+    }
+
+    .products-section {
+        padding: 75px 0 95px;
+    }
+
+    .product-panel {
+        height: 500px;
+        padding: 22px;
+    }
+
+    .product-image {
+        max-height: 270px;
+    }
+
+    .product-name {
+        font-size: 36px;
+    }
+}
+
+
+/* ==========================================
+   21. RESPONSIVE MOVIL
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    :root {
+        --header-height: 75px;
+    }
+
+    /* HEADER */
+
+    .site-header .navbar {
+        min-height: 75px;
+        padding: 10px 0;
+    }
+
+    .brand-image {
+        height: 36px;
+    }
+
+    /* SECCION */
+
+    .products-section {
+        padding: 60px 0 80px;
+    }
+
+    .products-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .products-section-title {
+        font-size: clamp(42px, 10vw, 58px);
+    }
+
+    /* TARJETAS */
+
+    .product-panel {
+        height: 475px;
+        padding: 23px;
+
+        border-radius: 22px;
+    }
+
+    .product-image {
+        max-height: 270px;
+    }
+
+    .product-name {
+        font-size: 36px;
+    }
+
+    .product-glow {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* FOOTER */
+
+    .footer-links {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+
+/* ==========================================
+   22. MOVILES PEQUEÑOS
+========================================== */
+
+@media (max-width: 375px) {
+
+    .products-section-title {
+        font-size: 40px;
+    }
+
+    .product-panel {
+        height: 450px;
+    }
+
+    .product-image {
+        max-height: 245px;
+    }
+
+    .product-name {
+        font-size: 32px;
+    }
+
+    .product-buy {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   23. ACCESIBILIDAD
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

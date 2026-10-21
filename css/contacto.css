@@ -1,0 +1,1073 @@
+
+/* ==========================================
+   PARANICE - PAGINA DE CONTACTO
+   Bootstrap 5.0.2
+   CSS INDEPENDIENTE
+========================================== */
+
+
+/* ==========================================
+   1. VARIABLES Y TIPOGRAFIAS
+========================================== */
+
+:root {
+    --purple: #4b1d82;
+    --purple-dark: #2d154f;
+    --lavender: #a69ccc;
+    --lavender-light: #e8e3f5;
+    --pink: #bd5998;
+    --cream: #fdf7f0;
+    --white: #ffffff;
+
+    --font-display: 'Lilita One', cursive;
+    --font-body: 'DM Sans', sans-serif;
+
+    --header-height: 100px;
+}
+
+
+/* ==========================================
+   2. ESTILOS GENERALES
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    margin: 0;
+    padding: var(--header-height) 0 0;
+
+    background: var(--cream);
+    color: var(--purple-dark);
+
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.page-container {
+    max-width: 1440px;
+}
+
+.container-fluid.page-container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* ==========================================
+   3. HEADER GLASSMORPHISM
+========================================== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: var(--header-height);
+    z-index: 1050;
+
+    background: rgba(166, 156, 204, 0.42);
+
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(166, 156, 204, 0.55);
+
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    backdrop-filter: blur(24px) saturate(160%);
+
+    box-shadow:
+        0 8px 30px rgba(45, 21, 79, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.site-header .navbar {
+    min-height: var(--header-height);
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* ==========================================
+   4. LOGO OFICIAL SVG
+========================================== */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+.brand-image {
+    display: block;
+
+    height: 48px;
+    width: auto;
+
+    max-width: 190px;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   5. CAPSULA DE NAVEGACION
+========================================== */
+
+.nav-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 9px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 60px;
+
+    box-shadow: 0 4px 20px rgba(45, 21, 79, 0.05);
+}
+
+.nav-pill .nav-item {
+    list-style: none;
+}
+
+.nav-pill .nav-link {
+    display: block;
+
+    padding: 13px 20px !important;
+
+    color: var(--purple-dark) !important;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.nav-pill .nav-link:hover {
+    background: rgba(255, 255, 255, 0.60);
+    color: var(--purple) !important;
+}
+
+.nav-pill .nav-link.active {
+    background: rgba(255, 255, 255, 0.90);
+    color: var(--purple) !important;
+}
+
+
+/* ==========================================
+   6. LOGO Y MENU CENTRADOS EN DESKTOP
+========================================== */
+
+@media (min-width: 992px) {
+
+    .nav-container {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+
+        gap: 28px;
+    }
+
+    .nav-container .navbar-brand {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .nav-container .navbar-collapse {
+        position: static !important;
+        display: flex !important;
+
+        flex-grow: 0;
+        flex-basis: auto;
+
+        width: auto;
+
+        transform: none !important;
+        margin: 0;
+    }
+
+    .nav-pill {
+        width: max-content;
+    }
+}
+
+
+/* ==========================================
+   7. HERO DE CONTACTO
+========================================== */
+
+.contact-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 115px 0 125px;
+
+    background: #d9d0ef;
+    color: var(--purple-dark);
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* TEXTO SUPERIOR */
+
+.contact-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    color: var(--purple);
+}
+
+
+/* TITULO PRINCIPAL */
+
+.contact-hero-title {
+    margin-bottom: 30px;
+
+    font-family: var(--font-display);
+    font-size: clamp(54px, 7.5vw, 112px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+
+    color: var(--purple-dark);
+}
+
+.contact-hero-title span {
+    display: block;
+    color: #534e9f;
+}
+
+
+/* DESCRIPCION */
+
+.contact-hero-description {
+    max-width: 530px;
+    margin: 0 auto 35px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #463665;
+}
+
+
+/* BOTON DEL HERO */
+
+.contact-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    padding: 14px 25px;
+
+    border: 1px solid rgba(45, 21, 79, 0.25);
+    border-radius: 40px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: var(--purple-dark);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-hero-link:hover {
+    background: rgba(255, 255, 255, 0.45);
+    color: var(--purple-dark);
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   8. DECORACIONES DEL HERO
+========================================== */
+
+.contact-hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.contact-decoration-one {
+    width: 360px;
+    height: 360px;
+
+    top: -160px;
+    left: -140px;
+
+    border: 65px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-decoration-two {
+    width: 430px;
+    height: 430px;
+
+    bottom: -250px;
+    right: -150px;
+
+    border: 80px solid rgba(255, 255, 255, 0.20);
+}
+
+
+/* ==========================================
+   9. SECCION DE CONTACTO
+========================================== */
+
+.contact-section {
+    padding: 110px 0 125px;
+
+    background: var(--cream);
+}
+
+.contact-section .row {
+    --bs-gutter-x: 30px;
+}
+
+
+/* ==========================================
+   10. PANEL INFORMATIVO
+========================================== */
+
+.contact-info-panel {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    min-height: 640px;
+
+    padding: 55px 45px;
+
+    overflow: hidden;
+    border-radius: 28px;
+
+    background: rgba(83, 78, 159, 0.90);
+    color: var(--purple-dark);
+}
+
+.contact-info-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TEXTO SUPERIOR */
+
+.contact-info-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 35px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+
+    color: #dbd6f9;
+}
+
+
+/* TITULO */
+
+.contact-info-title {
+    margin-bottom: 25px;
+
+    font-size: clamp(58px, 5vw, 86px);
+    line-height: 0.95;
+
+    color: #dbd6f9;
+}
+
+.contact-info-title span {
+    display: block;
+    color: #dbd6f9;
+}
+
+
+/* DESCRIPCION */
+
+.contact-info-description {
+    max-width: 370px;
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: #dbd6f9;
+}
+
+
+/* ==========================================
+   11. REDES SOCIALES
+========================================== */
+
+.contact-social-block {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+    margin-top: 65px;
+}
+
+.contact-social-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #dbd6f9;
+}
+
+.contact-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+    padding: 14px 23px;
+
+    border: 1px solid rgba(45, 21, 79, 0.3);
+    border-radius: 40px;
+
+    color: #dbd6f9;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-social-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #dbd6f9;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* ==========================================
+   13. PANEL DEL FORMULARIO
+========================================== */
+
+.contact-form-panel {
+    height: 100%;
+
+    padding: 55px 50px;
+
+    border: 1px solid rgba(45, 21, 79, 0.06);
+    border-radius: 28px;
+
+    background: var(--white);
+
+    box-shadow: 0 20px 65px rgba(45, 21, 79, 0.045);
+}
+
+.contact-form-heading {
+    margin-bottom: 40px;
+}
+
+
+/* TEXTO SUPERIOR */
+
+.contact-form-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--pink);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+
+/* TITULO */
+
+.contact-form-title {
+    margin-bottom: 12px;
+
+    color: var(--purple-dark);
+
+    font-size: clamp(36px, 3vw, 48px);
+    line-height: 1.1;
+}
+
+
+/* INTRODUCCION */
+
+.contact-form-intro {
+    max-width: 430px;
+    margin: 0;
+
+    color: #6b6074;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   14. CAMPOS DEL FORMULARIO
+========================================== */
+
+.contact-label {
+    margin-bottom: 10px;
+
+    color: var(--purple-dark);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.contact-input {
+    width: 100%;
+    min-height: 56px;
+
+    padding: 15px 18px;
+
+    border: 1px solid #ded8e8;
+    border-radius: 14px;
+
+    background: #fbf9fd;
+    color: var(--purple-dark);
+
+    font-family: var(--font-body);
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-input::placeholder {
+    color: #9c93a8;
+    opacity: 1;
+}
+
+.contact-input:focus {
+    color: var(--purple-dark);
+    background: var(--white);
+
+    border-color: var(--lavender);
+
+    box-shadow:
+        0 0 0 4px rgba(166, 156, 204, 0.15);
+}
+
+.contact-textarea {
+    min-height: 175px;
+    resize: vertical;
+}
+
+
+/* VALIDACION BOOTSTRAP */
+
+.contact-form .invalid-feedback {
+    margin-top: 8px;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+}
+
+.contact-form .was-validated .form-control:invalid,
+.contact-form.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+.contact-form.was-validated .form-select:invalid {
+    border-color: #dc3545;
+}
+
+
+/* ==========================================
+   15. BOTON DEL FORMULARIO
+========================================== */
+
+.contact-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-top: 12px;
+}
+
+.contact-required {
+    color: #776b85;
+    font-size: 12px;
+}
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+    padding: 17px 27px;
+
+    border: 2px solid var(--purple);
+    border-radius: 50px;
+
+    background: var(--purple);
+    color: var(--white);
+
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-4px);
+
+    background: transparent;
+    color: var(--purple);
+}
+
+.contact-submit:focus-visible {
+    outline: 3px solid var(--lavender);
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   16. MENSAJE DE VALIDACION
+========================================== */
+
+.contact-form-feedback {
+    margin-top: 25px;
+    padding: 20px 22px;
+
+    border: 1px solid rgba(75, 29, 130, 0.15);
+    border-radius: 14px;
+
+    background: var(--lavender-light);
+    color: var(--purple-dark);
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.contact-form-feedback[hidden] {
+    display: none;
+}
+
+
+
+
+
+/* ==========================================
+   18. FOOTER
+========================================== */
+
+.site-footer {
+    padding: 65px 0 25px;
+    background: #eae4f2;
+}
+
+.footer-brand {
+    display: inline-block;
+
+    color: var(--purple);
+    font-family: var(--font-display);
+    font-size: 38px;
+}
+
+.footer-logo {
+    display: block;
+
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.footer-description {
+    margin-top: 12px;
+
+    color: #776b85;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--purple-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 55px;
+    padding-top: 22px;
+
+    border-top: 1px solid #d1c7dd;
+
+    color: #776b85;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   19. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+    :root {
+        --header-height: 82px;
+    }
+
+    /* HEADER */
+
+    .site-header .navbar {
+        min-height: 82px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .brand-image {
+        height: 42px;
+    }
+
+    .navbar-toggler {
+        border: 0;
+        box-shadow: none !important;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    .nav-pill {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+        padding: 12px;
+
+        border-radius: 24px;
+    }
+
+    .nav-pill .nav-link {
+        padding: 13px 18px !important;
+    }
+
+
+    /* HERO */
+
+    .contact-hero {
+        padding: 95px 0 100px;
+    }
+
+
+    /* FORMULARIO */
+
+    .contact-section {
+        padding: 75px 0 90px;
+    }
+
+    .contact-info-panel {
+        min-height: 430px;
+    }
+
+    .contact-social-block {
+        margin-top: 35px;
+    }
+
+    .contact-form-panel {
+        padding: 45px;
+    }
+
+}
+
+
+/* ==========================================
+   20. RESPONSIVE MOVIL
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    :root {
+        --header-height: 75px;
+    }
+
+
+    /* HEADER */
+
+    .site-header .navbar {
+        min-height: 75px;
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .brand-image {
+        height: 36px;
+    }
+
+
+    /* HERO */
+
+    .contact-hero {
+        padding: 85px 0 90px;
+    }
+
+    .contact-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .contact-hero-title {
+        font-size: clamp(46px, 11vw, 70px);
+        letter-spacing: -1px;
+    }
+
+    .contact-hero-description {
+        max-width: 350px;
+        font-size: 15px;
+    }
+
+
+    /* DECORACIONES */
+
+    .contact-decoration-one {
+        width: 240px;
+        height: 240px;
+
+        top: -110px;
+        left: -145px;
+    }
+
+    .contact-decoration-two {
+        width: 250px;
+        height: 250px;
+
+        right: -150px;
+        bottom: -130px;
+    }
+
+
+    /* SECCION */
+
+    .contact-section {
+        padding: 55px 0 75px;
+    }
+
+
+    /* PANEL INFORMATIVO */
+
+    .contact-info-panel {
+        min-height: 420px;
+
+        padding: 40px 30px;
+        border-radius: 22px;
+    }
+
+    .contact-info-title {
+        font-size: 62px;
+    }
+
+    .contact-info-description {
+        font-size: 15px;
+    }
+
+
+    /* FORMULARIO */
+
+    .contact-form-panel {
+        padding: 40px 25px;
+        border-radius: 22px;
+    }
+
+    .contact-form-title {
+        font-size: 36px;
+    }
+
+    .contact-form-heading {
+        margin-bottom: 30px;
+    }
+
+    .contact-form-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
+
+
+    /* CIERRE */
+
+    .contact-closing {
+        padding: 85px 0;
+    }
+
+    .contact-closing-title {
+        font-size: clamp(48px, 11vw, 66px);
+    }
+
+    .contact-closing-content p {
+        font-size: 15px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-links {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
+
+
+/* ==========================================
+   21. ACCESIBILIDAD
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

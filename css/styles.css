@@ -1,0 +1,1411 @@
+
+/* ==========================================
+   PARANICE - HOME
+   Bootstrap 5.0.2
+   CSS PRINCIPAL - VERSION CORREGIDA
+========================================== */
+
+
+/* ==========================================
+   1. VARIABLES Y TIPOGRAFIAS
+========================================== */
+
+:root {
+    --purple: #4b1d82;
+    --purple-dark: #2d154f;
+    --lavender: #a69ccc;
+    --lavender-light: #e8e3f5;
+    --pink: #bd5998;
+    --cream: #fdf7f0;
+    --white: #ffffff;
+
+    --font-display: 'Lilita One', cursive;
+    --font-body: 'DM Sans', sans-serif;
+
+    --header-height: 100px;
+}
+
+
+/* ==========================================
+   2. ESTILOS GENERALES
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    margin: 0;
+    padding: var(--header-height) 0 0;
+
+    background: var(--cream);
+    color: var(--purple-dark);
+
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.page-container {
+    max-width: 1440px;
+}
+
+.container-fluid.page-container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* ==========================================
+   3. HEADER GLASSMORPHISM
+========================================== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: var(--header-height);
+    z-index: 1050;
+
+    background: rgba(166, 156, 204, 0.42);
+
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(166, 156, 204, 0.55);
+
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    backdrop-filter: blur(24px) saturate(160%);
+
+    box-shadow:
+        0 8px 30px rgba(45, 21, 79, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.site-header .navbar {
+    min-height: var(--header-height);
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* ==========================================
+   4. LOGO
+========================================== */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+.brand-image {
+    height: 48px;
+    width: auto;
+    max-width: 190px;
+
+    object-fit: contain;
+}
+
+.brand-text {
+    display: none;
+
+    font-family: var(--font-display);
+    font-size: 36px;
+    line-height: 1;
+
+    letter-spacing: -1px;
+    color: var(--purple);
+}
+
+
+/* ==========================================
+   5. CAPSULA DE NAVEGACION
+========================================== */
+
+.nav-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    list-style: none;
+    margin: 0;
+    padding: 9px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 60px;
+
+    box-shadow: 0 4px 20px rgba(45, 21, 79, 0.05);
+}
+
+.nav-pill .nav-item {
+    list-style: none;
+}
+
+.nav-pill .nav-link {
+    display: block;
+    padding: 13px 20px !important;
+
+    color: var(--purple-dark) !important;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.nav-pill .nav-link:hover {
+    background: rgba(255, 255, 255, 0.60);
+    color: var(--purple) !important;
+}
+
+.nav-pill .nav-link.active {
+    background: rgba(255, 255, 255, 0.90);
+    color: var(--purple) !important;
+}
+
+
+/* ==========================================
+   6. LOGO Y MENU CENTRADOS
+========================================== */
+
+@media (min-width: 992px) {
+
+    .nav-container {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+
+        gap: 28px;
+    }
+
+    .nav-container .navbar-brand {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .nav-container .navbar-collapse {
+        position: static !important;
+        display: flex !important;
+
+        flex-grow: 0;
+        flex-basis: auto;
+
+        width: auto;
+
+        transform: none !important;
+        margin: 0;
+    }
+
+    .nav-pill {
+        width: max-content;
+    }
+}
+
+
+/* ==========================================
+   7. HERO ILUSTRADO
+========================================== */
+
+.hero-section {
+    position: relative;
+
+    padding-top: 65px;
+    padding-bottom: 100px;
+
+    overflow: hidden;
+}
+
+.hero-parallax {
+    position: relative;
+
+    isolation: isolate;
+    background-color: #d9d0ef;
+}
+
+
+/* FONDO CON EFECTO PARALLAX */
+
+.parallax-background {
+    position: absolute;
+
+    top: -180px;
+    bottom: -180px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 0;
+
+    background-image: url("../img/fondo-home.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    transform: translate3d(0, 0, 0);
+
+    will-change: transform;
+    pointer-events: none;
+}
+
+
+/* CAPA SUAVE PARA LECTURA */
+
+.hero-parallax::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(251, 248, 244, 0.08),
+        rgba(251, 248, 244, 0.04)
+    );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   8. TITULAR PRINCIPAL - DOS LINEAS
+========================================== */
+
+/*
+   CORRECCION:
+
+   El escenario mantiene su ancho maximo,
+   pero el texto tiene suficiente espacio
+   para mostrarse en dos lineas.
+
+   Los personajes se ubican mas hacia
+   los extremos, sin superponerse.
+*/
+
+.hero-heading-stage {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 1440px;
+    min-height: 390px;
+
+    margin: 0 auto 32px;
+
+    padding: 18px 5%;
+}
+
+
+/* CONTENEDOR DEL TITULO */
+
+.hero-heading-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    text-align: center;
+}
+
+
+/* TITULO PRINCIPAL */
+
+.hero-title {
+    margin: 0;
+
+    font-size: clamp(48px, 5.5vw, 100px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+
+    text-align: center;
+    color: #534e9f;
+}
+
+
+/* CADA LINEA DEL TITULO */
+
+.hero-title .title-line {
+    display: block;
+
+    width: 100%;
+    white-space: nowrap;
+
+    color: #534e9f;
+}
+
+
+/* SEGUNDA LINEA */
+
+.hero-title .title-accent {
+    color: #534e9f;
+}
+
+
+/* COMPATIBILIDAD CON OTROS SPAN */
+
+.hero-title > span:not(.title-line) {
+    display: block;
+    color: #534e9f;
+}
+
+
+/* DESCRIPCION */
+
+.hero-description {
+    max-width: 440px;
+
+    margin: 25px auto 0;
+
+    color: #463665;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   9. PERSONAJES DECORATIVOS
+========================================== */
+
+/*
+   Los personajes solamente se desplazan
+   al hacer scroll mediante JavaScript.
+
+   No tienen animacion automatica.
+*/
+
+.character-wrapper {
+    position: absolute;
+    z-index: 4;
+
+    pointer-events: none;
+    user-select: none;
+
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+
+/* VAINILLA - IZQUIERDA */
+
+.character-left {
+    left: -5%;
+    top: 50%;
+
+    width: clamp(220px, 24vw, 360px);
+}
+
+
+/* GALLETA - DERECHA */
+
+.character-right {
+    right: -5%;
+    top: 50%;
+
+    width: clamp(200px, 21vw, 320px);
+}
+
+
+/* IMAGEN INTERIOR */
+
+.character-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    transform: translateY(-50%);
+    transform-origin: center center;
+
+    pointer-events: none;
+    user-select: none;
+
+    animation: none;
+    transition: none;
+}
+
+.floating-left,
+.floating-right {
+    animation: none;
+}
+
+
+/* ==========================================
+   10. SLIDER DE PRODUCTOS
+========================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.product-slider {
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 100%;
+    height: 560px;
+
+    overflow: hidden;
+}
+
+
+/* TARJETAS */
+
+.product-panel {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1 1 0;
+    min-width: 0;
+
+    padding: 26px;
+
+    overflow: hidden;
+    border-radius: 24px;
+
+    color: var(--purple-dark);
+
+    transition: box-shadow 0.35s ease;
+}
+
+.product-panel:hover,
+.product-panel:focus-visible {
+    flex: 1 1 0;
+
+    color: var(--purple-dark);
+
+    box-shadow:
+        0 18px 40px rgba(45, 21, 79, 0.12);
+}
+
+.product-panel:focus-visible {
+    outline: 3px solid var(--purple);
+    outline-offset: 2px;
+}
+
+
+/* COLORES DE LAS TARJETAS */
+
+.product-one {
+    background: rgba(185, 197, 151, 0.90);
+    backdrop-filter: blur(6px);
+}
+
+.product-two {
+    background: rgba(219, 177, 164, 0.88);
+    backdrop-filter: blur(6px);
+}
+
+.product-three {
+    background: rgba(123, 118, 192, 0.88);
+    backdrop-filter: blur(6px);
+}
+
+
+/* PARTE SUPERIOR */
+
+.panel-top {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.panel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-panel:hover .panel-arrow {
+    background: var(--white);
+    transform: rotate(45deg);
+}
+
+
+/* ZONA VISUAL */
+
+.panel-visual {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    min-height: 0;
+}
+
+.product-glow {
+    position: absolute;
+
+    width: 255px;
+    height: 255px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease;
+}
+
+.product-panel:hover .product-glow {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+
+/* PLACEHOLDER PROVISIONAL */
+
+.product-placeholder {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 205px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.97),
+        rgba(255, 255, 255, 0.55)
+    );
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        20px 25px 0 rgba(75, 29, 130, 0.12);
+
+    transform: translateY(0) scale(1);
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.3s ease;
+}
+
+.product-placeholder span {
+    font-family: var(--font-display);
+    font-size: 64px;
+    color: var(--purple);
+}
+
+.product-panel:hover .product-placeholder {
+    transform: translateY(-12px) scale(1.06);
+}
+
+
+/* IMAGEN REAL DEL PRODUCTO */
+
+.product-image {
+    position: absolute;
+    z-index: 2;
+
+    max-height: 340px;
+    max-width: 85%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        14px 20px 14px rgba(45, 21, 79, 0.14)
+    );
+
+    transform: translateY(0) scale(1);
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
+}
+
+.panel-visual.has-image .product-placeholder {
+    opacity: 0;
+}
+
+.product-panel:hover .product-image,
+.product-panel:focus-visible .product-image {
+    transform: translateY(-12px) scale(1.06);
+    filter: drop-shadow(14px 28px 18px rgba(45, 21, 79, 0.20));
+}
+
+
+/* PARTE INFERIOR */
+
+.panel-bottom {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 12px;
+}
+
+.product-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.product-name {
+    font-family: var(--font-display);
+
+    font-size: clamp(27px, 3vw, 47px);
+    line-height: 1;
+
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.product-action {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 11px 16px;
+
+    background: var(--white);
+    border-radius: 40px;
+
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-panel:hover .product-action,
+.product-panel:focus-visible .product-action {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* PIE DEL SLIDER */
+
+.slider-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-top: 20px;
+
+    font-size: 13px;
+    color: #463665;
+}
+
+.text-link {
+    color: var(--purple);
+    font-weight: 800;
+}
+
+.text-link:hover {
+    color: var(--pink);
+}
+
+
+/* ==========================================
+   11. SECCION SOBRE PARANICE
+========================================== */
+
+.brand-section {
+    padding: 110px 0;
+    background: #fdf7f0;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+
+    display: block;
+    width: 24px;
+    height: 2px;
+
+    background: var(--pink);
+}
+
+.section-title {
+    font-size: clamp(48px, 5vw, 82px);
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #7b76c0;
+}
+
+.section-title span {
+    color: #282464;
+}
+
+.section-description {
+    max-width: 520px;
+    margin-bottom: 30px;
+
+    color: #6b6074;
+    font-size: 18px;
+}
+
+
+/* BOTONES */
+
+.btn-paranice {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 20px;
+    padding: 15px 28px;
+
+    background: var(--purple);
+    color: var(--white);
+
+    border: 2px solid var(--purple);
+    border-radius: 50px;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-paranice:hover {
+    background: transparent;
+    color: var(--purple);
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   12. EXPLORAR PRODUCTOS
+========================================== */
+
+.explore-section {
+    padding: 105px 0;
+
+    background: var(--purple);
+    color: var(--white);
+}
+
+.explore-section .eyebrow {
+    color: #e6b8e2;
+}
+
+.explore-title {
+    margin-bottom: 18px;
+    font-size: clamp(48px, 6vw, 90px);
+}
+
+.explore-section p {
+    margin-bottom: 32px;
+
+    color: #e3d7f0;
+    font-size: 18px;
+}
+
+.btn-light-custom {
+    background: var(--white);
+    color: var(--purple);
+    border-color: var(--white);
+}
+
+.btn-light-custom:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+
+/* ==========================================
+   13. FOOTER
+========================================== */
+
+.site-footer {
+    padding: 65px 0 25px;
+    background: #eae4f2;
+}
+
+.footer-brand {
+    color: var(--purple);
+
+    font-family: var(--font-display);
+    font-size: 38px;
+}
+
+.footer-description {
+    margin-top: 12px;
+
+    color: #776b85;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--purple-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin-top: 55px;
+    padding-top: 22px;
+
+    border-top: 1px solid #d1c7dd;
+
+    color: #776b85;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   14. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+    :root {
+        --header-height: 82px;
+    }
+
+    .site-header .navbar {
+        min-height: 82px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .brand-image {
+        height: 42px;
+    }
+
+    .navbar-toggler {
+        border: 0;
+        box-shadow: none !important;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    .nav-pill {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+        padding: 12px;
+
+        border-radius: 24px;
+    }
+
+    .nav-pill .nav-link {
+        padding: 13px 18px !important;
+    }
+
+    /*
+       Escenario ajustado para tablet.
+       Ya no sobrescribe todo el bloque
+       principal del titular.
+    */
+
+    .hero-heading-stage {
+        min-height: 340px;
+
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .hero-title {
+        font-size: clamp(44px, 5vw, 70px);
+    }
+
+    .character-left {
+        left: 0.5%;
+        width: 19%;
+    }
+
+    .character-right {
+        right: 0.5%;
+        width: 17%;
+    }
+
+    .product-slider {
+        height: 470px;
+    }
+
+    .product-panel {
+        padding: 18px;
+    }
+
+    .product-placeholder {
+        width: 110px;
+        height: 155px;
+    }
+
+    .product-placeholder span {
+        font-size: 46px;
+    }
+
+    .product-image {
+        max-height: 270px;
+    }
+
+    .product-action {
+        display: none;
+    }
+
+    .brand-section {
+        padding: 85px 0;
+    }
+}
+
+
+/* ==========================================
+   15. RESPONSIVE MOVIL
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    :root {
+        --header-height: 75px;
+    }
+
+    /* NAVEGACION */
+
+    .site-header .navbar {
+        min-height: 75px;
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .brand-image {
+        height: 36px;
+    }
+
+    .brand-text {
+        font-size: 30px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding-top: 36px;
+        padding-bottom: 60px;
+    }
+
+    .parallax-background {
+        top: 0;
+        bottom: 0;
+
+        background-size: cover;
+        background-position: center top;
+    }
+
+
+    /* TITULO Y PERSONAJES */
+
+    .hero-heading-stage {
+        position: relative;
+
+        min-height: 350px;
+        margin-bottom: 12px;
+
+        padding: 18px 8% 120px;
+
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .hero-heading-content {
+        position: relative;
+        z-index: 3;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding-top: 8px;
+        text-align: center;
+    }
+
+
+    /* TITULO MOVIL */
+
+    .hero-title {
+        font-size: clamp(38px, 9vw, 50px);
+        line-height: 1.02;
+
+        letter-spacing: -0.6px;
+
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    .hero-title .title-line {
+        display: block;
+
+        /*
+           En movil permitimos adaptar
+           las palabras al ancho disponible.
+        */
+
+        white-space: normal;
+    }
+
+
+    /* DESCRIPCION */
+
+    .hero-description {
+        max-width: 320px;
+        margin: 0 auto;
+
+        font-size: 15px;
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+    /* PERSONAJES GRANDES EN MOVIL */
+
+    .character-left,
+    .character-right {
+        top: 78%;
+        z-index: 4;
+    }
+
+    .character-left {
+        left: 7%;
+        width: clamp(130px, 34vw, 175px);
+    }
+
+    .character-right {
+        right: 7%;
+        width: clamp(125px, 32vw, 165px);
+    }
+
+
+    /* CARRUSEL MOVIL */
+
+    .product-slider {
+        display: flex;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        max-width: 100%;
+        height: 445px;
+
+        margin-top: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-panel,
+    .product-panel:hover,
+    .product-panel:focus-visible {
+        flex: 0 0 84%;
+        min-width: 84%;
+
+        scroll-snap-align: start;
+    }
+
+    .product-panel {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .product-placeholder {
+        width: 135px;
+        height: 185px;
+    }
+
+    .product-image {
+        max-height: 270px;
+    }
+
+    .product-name {
+        font-size: 36px;
+    }
+
+    .product-action {
+        display: inline-flex;
+
+        opacity: 1;
+        transform: none;
+    }
+
+    .slider-caption {
+        align-items: flex-start;
+        font-size: 12px;
+    }
+
+    .slider-caption > span {
+        max-width: 150px;
+    }
+
+
+    /* SECCIONES INFERIORES */
+
+    .brand-section {
+        padding: 75px 0;
+        background: #fdf7f0;
+    }
+
+    .section-title {
+        font-size: clamp(40px, 10vw, 58px);
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+
+    .explore-section {
+        padding: 80px 0;
+    }
+
+    .explore-title {
+        font-size: clamp(42px, 10vw, 62px);
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+
+/* ==========================================
+   16. MOVILES MUY ESTRECHOS
+========================================== */
+
+@media (max-width: 375px) {
+
+    .hero-heading-stage {
+        min-height: 340px;
+        padding: 16px 7% 115px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        max-width: 290px;
+        font-size: 14px;
+    }
+
+    .character-left,
+    .character-right {
+        top: 80%;
+    }
+
+    .character-left {
+        left: 5%;
+        width: 125px;
+    }
+
+    .character-right {
+        right: 5%;
+        width: 120px;
+    }
+
+    .product-panel,
+    .product-panel:hover,
+    .product-panel:focus-visible {
+        flex-basis: 86%;
+        min-width: 86%;
+    }
+}
+
+
+/* ==========================================
+   17. ACCESIBILIDAD
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .parallax-background,
+    .character-wrapper {
+        transform: none !important;
+        will-change: auto;
+    }
+}

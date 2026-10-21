@@ -1,0 +1,738 @@
+
+/* ==========================================
+   PARANICE - QUIENES SOMOS
+   Bootstrap 5.0.2
+   CSS INDEPENDIENTE
+========================================== */
+
+
+/* ==========================================
+   1. VARIABLES Y TIPOGRAFIAS
+========================================== */
+
+:root {
+    --purple: #4b1d82;
+    --purple-dark: #2d154f;
+
+    --lavender: #a69ccc;
+    --lavender-light: #e8e3f5;
+
+    --pink: #bd5998;
+    --cream: #fdf7f0;
+    --white: #ffffff;
+
+    --font-display: 'Lilita One', cursive;
+    --font-body: 'DM Sans', sans-serif;
+
+    --header-height: 100px;
+}
+
+
+/* ==========================================
+   2. ESTILOS GENERALES
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    margin: 0;
+    padding: var(--header-height) 0 0;
+
+    background: var(--cream);
+    color: var(--purple-dark);
+
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.page-container {
+    max-width: 1440px;
+}
+
+
+/* ==========================================
+   3. HEADER GLASSMORPHISM
+========================================== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: var(--header-height);
+    z-index: 1050;
+
+    background: rgba(166, 156, 204, 0.42);
+
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.35);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(166, 156, 204, 0.55);
+
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    backdrop-filter: blur(24px) saturate(160%);
+
+    box-shadow:
+        0 8px 30px rgba(45, 21, 79, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.site-header .navbar {
+    min-height: var(--header-height);
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* ==========================================
+   4. LOGO SVG
+========================================== */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+.brand-image {
+    display: block;
+
+    height: 48px;
+    width: auto;
+    max-width: 190px;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   5. CAPSULA DE NAVEGACION
+========================================== */
+
+.nav-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    list-style: none;
+    margin: 0;
+    padding: 9px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 60px;
+
+    box-shadow:
+        0 4px 20px rgba(45, 21, 79, 0.05);
+}
+
+.nav-pill .nav-item {
+    list-style: none;
+}
+
+.nav-pill .nav-link {
+    display: block;
+
+    padding: 13px 20px !important;
+
+    color: var(--purple-dark) !important;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.nav-pill .nav-link:hover {
+    background: rgba(255, 255, 255, 0.60);
+    color: var(--purple) !important;
+}
+
+.nav-pill .nav-link.active {
+    background: rgba(255, 255, 255, 0.90);
+    color: var(--purple) !important;
+}
+
+
+/* ==========================================
+   6. NAVEGACION DESKTOP
+========================================== */
+
+@media (min-width: 992px) {
+
+    .nav-container {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+
+        gap: 28px;
+    }
+
+    .nav-container .navbar-brand {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .nav-container .navbar-collapse {
+        position: static !important;
+        display: flex !important;
+
+        flex-grow: 0;
+        flex-basis: auto;
+
+        width: auto;
+
+        transform: none !important;
+        margin: 0;
+    }
+
+    .nav-pill {
+        width: max-content;
+    }
+}
+
+
+/* ==========================================
+   7. NUESTRA HISTORIA
+========================================== */
+
+.about-story {
+    min-height: 70vh;
+
+    padding: 110px 0 120px;
+
+    background: var(--cream);
+}
+
+.about-story-content {
+    max-width: 585px;
+}
+
+
+/* TITULO PRINCIPAL */
+
+.about-section-title {
+    margin-bottom: 35px;
+
+    font-size: clamp(58px, 6vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -1px;
+
+    color: #534ea0;
+}
+
+.about-section-title span {
+    display: block;
+    color: #534ea0;
+}
+
+
+/* PARRAFO DESTACADO */
+
+.about-lead {
+    margin-bottom: 25px;
+
+    color: var(--purple-dark);
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+
+/* PARRAFOS GENERALES */
+
+.about-body {
+    margin-bottom: 20px;
+
+    color: #6b6074;
+
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.about-body:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   8. COMPOSICION VISUAL DE PRODUCTOS
+========================================== */
+
+.about-story-visual {
+    width: 100%;
+}
+
+.about-product-display {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 560px;
+    padding: 36px;
+
+    overflow: hidden;
+    border-radius: 28px;
+
+    background: rgba(123, 118, 192, 0.88);
+}
+
+
+/* TEXTO SUPERIOR */
+
+.about-visual-label {
+    position: relative;
+    z-index: 3;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: var(--white);
+}
+
+
+/* CONTENEDOR DE IMAGENES */
+
+.about-product-images {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    min-height: 360px;
+}
+
+
+/* IMAGENES GENERALES */
+
+.about-product-image {
+    position: absolute;
+
+    width: auto;
+    height: auto;
+
+    max-width: 58%;
+    max-height: 330px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        12px 20px 15px rgba(45, 21, 79, 0.18)
+    );
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* PRODUCTO IZQUIERDA */
+
+.about-image-one {
+    z-index: 1;
+    left: 2%;
+
+    transform:
+        translateY(28px)
+        rotate(-9deg)
+        scale(0.86);
+}
+
+
+/* PRODUCTO CENTRAL */
+
+.about-image-two {
+    z-index: 2;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(-10px)
+        scale(1);
+}
+
+
+/* PRODUCTO DERECHA */
+
+.about-image-three {
+    z-index: 1;
+    right: 2%;
+
+    transform:
+        translateY(28px)
+        rotate(9deg)
+        scale(0.86);
+}
+
+
+/* HOVER SUAVE */
+
+.about-product-display:hover .about-image-one {
+    transform:
+        translateY(15px)
+        rotate(-9deg)
+        scale(0.9);
+}
+
+.about-product-display:hover .about-image-two {
+    transform:
+        translateX(-50%)
+        translateY(-20px)
+        scale(1.04);
+}
+
+.about-product-display:hover .about-image-three {
+    transform:
+        translateY(15px)
+        rotate(9deg)
+        scale(0.9);
+}
+
+
+/* TEXTO INFERIOR */
+
+.about-visual-caption {
+    position: relative;
+    z-index: 3;
+
+    font-family: var(--font-display);
+    font-size: 26px;
+
+    text-align: center;
+    color: var(--white);
+}
+
+
+/* ==========================================
+   9. FOOTER
+========================================== */
+
+.site-footer {
+    padding: 65px 0 25px;
+    background: #eae4f2;
+}
+
+.footer-brand {
+    display: inline-block;
+}
+
+.footer-logo {
+    display: block;
+
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.footer-description {
+    margin-top: 12px;
+
+    color: #776b85;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--purple-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 55px;
+    padding-top: 22px;
+
+    border-top: 1px solid #d1c7dd;
+
+    color: #776b85;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   10. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+    :root {
+        --header-height: 82px;
+    }
+
+    /* NAVEGACION */
+
+    .site-header .navbar {
+        min-height: 82px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .brand-image {
+        height: 42px;
+    }
+
+    .navbar-toggler {
+        border: 0;
+        box-shadow: none !important;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    .nav-pill {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+        padding: 12px;
+
+        border-radius: 24px;
+    }
+
+    .nav-pill .nav-link {
+        padding: 13px 18px !important;
+    }
+
+    /* HISTORIA */
+
+    .about-story {
+        padding: 85px 0;
+    }
+
+    .about-section-title {
+        font-size: 74px;
+    }
+
+    /* PRODUCTOS */
+
+    .about-product-display {
+        min-height: 470px;
+    }
+
+}
+
+
+/* ==========================================
+   11. RESPONSIVE MOVIL
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    :root {
+        --header-height: 75px;
+    }
+
+    /* NAVEGACION */
+
+    .site-header .navbar {
+        min-height: 75px;
+        padding: 10px 0;
+    }
+
+    .brand-image {
+        height: 36px;
+    }
+
+    /* HISTORIA */
+
+    .about-story {
+        padding: 65px 0 75px;
+    }
+
+    .about-section-title {
+        margin-bottom: 28px;
+
+        font-size: clamp(48px, 11vw, 65px);
+        line-height: 1;
+    }
+
+    .about-lead {
+        font-size: 18px;
+    }
+
+    .about-body {
+        font-size: 15px;
+    }
+
+    /* PRODUCTOS */
+
+    .about-product-display {
+        min-height: 390px;
+        padding: 24px;
+
+        border-radius: 22px;
+    }
+
+    .about-product-images {
+        min-height: 275px;
+    }
+
+    .about-product-image {
+        max-height: 225px;
+        max-width: 62%;
+    }
+
+    .about-visual-label {
+        font-size: 10px;
+    }
+
+    .about-visual-caption {
+        font-size: 20px;
+    }
+
+    /* FOOTER */
+
+    .footer-links {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
+
+
+/* ==========================================
+   12. MOVILES PEQUEÑOS
+========================================== */
+
+@media (max-width: 375px) {
+
+    .about-section-title {
+        font-size: 46px;
+    }
+
+    .about-product-display {
+        min-height: 340px;
+    }
+
+    .about-product-images {
+        min-height: 235px;
+    }
+
+    .about-product-image {
+        max-height: 190px;
+    }
+
+    .about-visual-caption {
+        font-size: 17px;
+    }
+
+}
+
+
+/* ==========================================
+   13. ACCESIBILIDAD
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
