@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contáctanos | Paranice</title>
+
+    <meta name="description"
+          content="¿Tienes algo que contarnos? Ponte en contacto con Paranice.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Lilita+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- BOOTSTRAP 5.0.2 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+  
+<link rel="stylesheet" href="css/contacto.css">
+
+
+</head>
+
+<body>
+
+    <!-- ======================================
+         NAVEGACION PRINCIPAL
+    ====================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar navbar-expand-lg navbar-light"
+             aria-label="Navegación principal">
+
+            <div class="container-fluid nav-container">
+
+                <!-- LOGO OFICIAL -->
+
+                <a class="navbar-brand"
+                   href="index.html"
+                   aria-label="Paranice - Inicio">
+
+                    <img
+                        src="img/logo-paranice.svg"
+                        alt="Paranice"
+                        class="brand-image"
+                        draggable="false"
+                    >
+
+                </a>
+
+                <!-- MENU MOVIL -->
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarParanice"
+                    aria-controls="navbarParanice"
+                    aria-expanded="false"
+                    aria-label="Abrir menú"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- NAVEGACION -->
+
+                <div class="collapse navbar-collapse"
+                     id="navbarParanice">
+
+                    <ul class="navbar-nav nav-pill">
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="nosotros.html">
+                                ¿Quiénes somos?
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="productos.html">
+                                Productos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               aria-current="page"
+                               href="contacto.html">
+                                Contáctanos
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ======================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+        <!-- ==================================
+             HERO CONTACTO
+        ================================== -->
+
+        <section class="contact-hero">
+
+            <div class="container page-container">
+
+                <div class="contact-hero-content">
+
+                   
+                    <h1 class="contact-hero-title">
+                        ¿Tienes algo
+                        <span>que contarnos?</span>
+                    </h1>
+
+                                       <a href="#escribenos"
+                       class="contact-hero-link">
+                        Contáctanos
+                        <span aria-hidden="true">↓</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             FORMULARIO DE CONTACTO
+        ================================== -->
+
+        <section class="contact-section" id="escribenos">
+
+            <div class="container page-container">
+
+                <div class="row g-4 g-lg-5 align-items-stretch">
+
+                    <!-- COLUMNA INFORMATIVA -->
+
+                    <div class="col-lg-5">
+
+                        <div class="contact-info-panel">
+
+                            <div class="contact-info-content">
+
+                               
+                                <h2 class="contact-info-title">
+                                    ¡Hola,
+                                    <span>hola!</span>
+                                </h2>
+
+                                <p class="contact-info-description">
+                                    En Paranice creemos que
+                                    las mejores relaciones comienzan
+                                    con una buena conversación.
+                                </p>
+
+                                <p class="contact-info-description">
+                                    Cuéntanos qué tienes en mente.
+                                    Estamos aquí para conocer
+                                    tus preguntas y sugerencias.
+                                </p>
+
+                                <div class="contact-social-block">
+
+                                    <span class="contact-social-label">
+                                        SIGUE CONOCIENDO NUESTRO DELICIOSO UNIVERSO EN
+                                    </span>
+
+                                    <a
+                                        href="https://www.instagram.com/paranice/"
+                                        class="contact-social-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Visitar Instagram de Paranice"
+                                    >
+                                        Instagram
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                          
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLUMNA FORMULARIO -->
+
+                    <div class="col-lg-7">
+
+                        <div class="contact-form-panel">
+
+                            <div class="contact-form-heading">
+
+                                <h2 class="contact-form-title">
+                                    Envíanos una GranOLA mensajera
+                                </h2>
+
+                                <p class="contact-form-intro">
+                                    Completa los siguientes campos
+                                    para compartir tu mensaje
+                                    con nosotros.
+                                </p>
+
+                            </div>
+
+
+                            <!-- FORMULARIO -->
+
+                            <form
+                                id="contactForm"
+                                class="contact-form needs-validation"
+                                novalidate
+                            >
+
+                                <div class="row g-4">
+
+                                    <!-- NOMBRE -->
+
+                                    <div class="col-md-6">
+
+                                        <label
+                                            for="contactName"
+                                            class="form-label contact-label"
+                                        >
+                                            Tu nombre *
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control contact-input"
+                                            id="contactName"
+                                            name="nombre"
+                                            placeholder="¿Cómo te llamas?"
+                                            autocomplete="name"
+                                            maxlength="100"
+                                            required
+                                        >
+
+                                        <div class="invalid-feedback">
+                                            Ingresa tu nombre.
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- CORREO -->
+
+                                    <div class="col-md-6">
+
+                                        <label
+                                            for="contactEmail"
+                                            class="form-label contact-label"
+                                        >
+                                            Correo electrónico *
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            class="form-control contact-input"
+                                            id="contactEmail"
+                                            name="correo"
+                                            placeholder="paranice@whynot.com"
+                                            autocomplete="email"
+                                            maxlength="254"
+                                            required
+                                        >
+
+                                        <div class="invalid-feedback">
+                                            Ingresa un correo electrónico válido.
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- MOTIVO -->
+
+                                    <div class="col-12">
+
+                                        <label
+                                            for="contactSubject"
+                                            class="form-label contact-label"
+                                        >
+                                            ¿Sobre qué quieres hablarnos? *
+                                        </label>
+
+                                        <select
+                                            id="contactSubject"
+                                            name="motivo"
+                                            class="form-select contact-input"
+                                            required
+                                        >
+
+                                            <option value="" selected disabled>
+                                                Selecciona una opción
+                                            </option>
+
+                                            <option value="productos">
+                                                Productos
+                                            </option>
+
+                                            <option value="sugerencias">
+                                                Ideas y sugerencias
+                                            </option>
+
+                                            <option value="colaboraciones">
+                                                PQRS
+                                            </option>
+
+                                            <option value="otros">
+                                                Otro motivo
+                                            </option>
+
+                                        </select>
+
+                                        <div class="invalid-feedback">
+                                            Selecciona un motivo de contacto.
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- MENSAJE -->
+
+                                    <div class="col-12">
+
+                                        <label
+                                            for="contactMessage"
+                                            class="form-label contact-label"
+                                        >
+                                            Tu mensaje *
+                                        </label>
+
+                                        <textarea
+                                            id="contactMessage"
+                                            name="mensaje"
+                                            class="form-control contact-input contact-textarea"
+                                            rows="6"
+                                            placeholder="Escribe tu carta, y una GranOLA nos la hará llegar."
+                                            maxlength="2000"
+                                            required
+                                        ></textarea>
+
+                                        <div class="invalid-feedback">
+                                            Escribe tu mensaje nuevamente.
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- BOTON -->
+
+                                    <div class="col-12">
+
+                                        <div class="contact-form-footer">
+
+                                            <span class="contact-required">
+                                                * Campos obligatorios
+                                            </span>
+
+                                            <button
+                                                type="submit"
+                                                class="contact-submit"
+                                            >
+                                                Revisar mensaje
+                                                <span aria-hidden="true">↗</span>
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+
+                            <!-- RESULTADO DE VALIDACION -->
+
+                            <div
+                                class="contact-form-feedback"
+                                id="contactFeedback"
+                                role="status"
+                                aria-live="polite"
+                                hidden
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container page-container">
+
+            <div class="row align-items-center gy-3">
+
+                <!-- LOGO -->
+
+                <div class="col-md-6">
+
+                    <a
+                        href="index.html"
+                        class="footer-brand"
+                        aria-label="Paranice - Inicio"
+                    >
+
+                        <img
+                            src="img/logo-paranice.svg"
+                            alt="Paranice"
+                            class="footer-logo"
+                            width="170"
+                            style="height: auto; display: block;"
+                        >
+
+                    </a>
+
+                    <p class="footer-description">
+                       Mucho más que algo rico.
+                    </p>
+
+                </div>
+
+
+                <!-- ENLACES -->
+
+                <div class="col-md-6">
+
+                    <div class="footer-links">
+
+                        <a href="index.html">Inicio</a>
+                        <a href="nosotros.html">Nosotros</a>
+                        <a href="productos.html">Productos</a>
+                        <a href="contacto.html">Contacto</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="currentYear">2026</span> Paranice.
+                </span>
+
+                <span>
+                    Proyecto académico · Desarrollo Web
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP 5.0.2 -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+
+    <!-- JAVASCRIPT GENERAL PARANICE -->
+
+    <script src="js/script.js"></script>
+
+
+    <!-- VALIDACION DEL FORMULARIO -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("contactForm");
+            const feedback = document.getElementById("contactFeedback");
+
+            if (!form || !feedback) return;
+
+            form.addEventListener("submit", function (event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                form.classList.add("was-validated");
+
+                feedback.hidden = true;
+
+                if (!form.checkValidity()) {
+                    return;
+                }
+
+                /*
+                 * DEMOSTRACION ACADEMICA:
+                 * Los datos se validan localmente.
+                 * No se envian a un servidor.
+                 */
+
+                feedback.textContent =
+                    "¡Tu mensaje está listo! El formulario pasó " +
+                    "la validación. Esta versión académica es " +
+                    "una demostración y todavía no envía " +
+                    "mensajes reales.";
+
+                feedback.hidden = false;
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
